@@ -21,7 +21,7 @@
 import time
 import sys
 import datetime
-
+from PARAMETERS import *
 sDate = sys.argv[1]
 delta = sys.argv[2]  # in days
 
@@ -45,12 +45,11 @@ endDate = startDate + difference
 #endYear = int(raw_input("Enter end year: "))
 #endMonth = int(raw_input("Enter end month: "))
 
-PATH = "/media/data3/roja/Balatarin/"
 bgraphname = "bipartite_politics_"+str(sMonth)+"_"+str(sDay)+"_"+str(sYear)+"_"+delta+"_days"
 #"+str(eMonth)+"_"+str(eDay)+"_"+str(eYear)
-l = open(PATH+"data/links-politics.txt","r")
-v = open(PATH+"data/votes-summary.txt","r")
-h = open(PATH+"CompleteRun/bipartite/"+bgraphname+".txt","w")
+l = open(DATAPATH+"/links-politics.txt","r")
+v = open(DATAPATH+"/votes-summary.txt","r")
+h = open(PATH+"/bipartite/"+bgraphname+".txt","w")
 t = open(PATH+"date_check.txt","w")
 
 t1 = time.time()
