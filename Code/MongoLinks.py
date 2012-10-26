@@ -29,7 +29,7 @@ import datetime
 
 connection = Connection()
 balatarindb = connection.Balatarin
-links = balatarindb.link
+links = balatarindb.links
 
 f = open(DATAPATH+"/links-summary.txt","r")
 log = open("mongoError.log","a")
