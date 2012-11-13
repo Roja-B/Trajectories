@@ -1,0 +1,14 @@
+
+compare two files:
+diff FILE1 FILE2
+
+copy from a a list of files:
+xargs -a RecoveryNumComs.txt cp -t RecoveryNumComs/
+
+sync all sub-directories as well:
+rsync -av --no-implied-dirs --files-from=RecoveryNumComs.txt / ./RecoveryNumComs/
+
+copy all files with a pattern:
+cp `grep -l "pattern" *` /destination/
+
+
