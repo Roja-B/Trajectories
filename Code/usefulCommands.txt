@@ -11,4 +11,4 @@ rsync -av --no-implied-dirs --files-from=RecoveryNumComs.txt / ./RecoveryNumComs
 copy all files with a pattern:
 cp `grep -l "pattern" *` /destination/
 
-
+strings file.txt
