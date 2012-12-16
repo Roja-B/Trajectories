@@ -9,7 +9,7 @@ for filename1 in $filenames; do
 			 continue 
 		fi
 		n=$(diff $filename1 $filename2|wc -l)
-		if [ $n -lt $n_min ]
+		if [ $n -lt $n_min -o $n -eq 0 ]
 		then
 			n_min=$n
 			f=$filename2
