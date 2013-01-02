@@ -1,0 +1,9 @@
+1)	change binary files to string:  ./changeToString.sh
+2)	break files based on presence of “!” (possibly beginning of file) or “strict” (beginning of dot file): ./breakFiles.sh
+3)	 clean data (any line starting with a number): ./ CleanFiles.sh
+4)	compute difference between each pair of files and save the smallest amount: ./difference.sh
+5)	run python removeDuplicates.py to remove duplicate code
+6)	run python makeEdgelist.py
+7)	start R and run source("main_clustering.R")
+
+
