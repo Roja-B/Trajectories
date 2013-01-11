@@ -1,4 +1,3 @@
-#"! 
  # Program that extracts the users and links of a particular category and writes them to a new file
 # Two files:
 # links-summary.txt
