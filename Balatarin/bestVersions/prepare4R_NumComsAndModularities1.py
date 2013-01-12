@@ -1,4 +1,4 @@
-PATH = "/media/data3/roja/Balatarin/CompleteRun"
+PATH = "/media/data2/roja/Balatarin/CompleteRun"
 f = open(PATH+"/Work/NumComsAndModularities","r")
 t = open(PATH+"/Work/NumComsAndModularities_betterformat","w")
 for line in f:

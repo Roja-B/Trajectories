@@ -24,13 +24,15 @@ eDelta = sys.argv[2]  # in days
 first = datetime.date(2006,8,14)
 startDate = first + datetime.timedelta(days=int(sDelta))
 endDate = startDate + datetime.timedelta(days=int(eDelta))
-PATH = "/media/data3/allen/"
+
+print startDate
+PATH = "/media/data2/roja/Balatarin"
 sDate = startDate.isoformat().split('T')[0].split('-')
 eDate = endDate.isoformat().split('T')[0].split('-')
 bgraphname = "bipartite_politics_"+sDate[1]+sDate[2]+sDate[0]+'-'+eDate[1]+eDate[2]+eDate[0]
-l = open(PATH+"processed_data/links_summary_politics.txt","r")
-v = open(PATH+"raw_data/votes-summary.txt","r")
-h = open(PATH+"bipartite/"+bgraphname+".txt","w")
+l = open(PATH+"/data/links-politics.txt","r")
+v = open(PATH+"/data/votes-summary.txt","r")
+h = open(PATH+"/CompleteRun/bipartite/"+bgraphname+".txt","w")
 print "1"
 links = []
 for line in l:
@@ -42,6 +44,7 @@ for line in l:
 	if date < startDate: continue
 	linkID = line.split()[0]   
 	links.append(linkID)	
+print len(links)," articles"
 #############################################################
 print "2"
 links_set = set(links) 					
@@ -53,11 +56,12 @@ for line in v:
 	date = datetime.date(year,month,day)
 	if date > endDate: continue
 	if date < startDate: continue
-	id = line.split()[1]               # id = link_id
-	if id in links_set:
-		graph_list.append((line.split()[2],id))   # (user_id, link_id)
+	link_id = line.split()[1]               # id = link_id
+	if link_id in links_set:
+		graph_list.append((line.split()[2],link_id))   # (user_id, link_id)
 graph_list.sort() 					# sorts by user_id
 N = len(graph_list)
+print N," votes"
 for i in range(N):
 	h.write(graph_list[i][0]+" "+graph_list[i][1]+"\n")
 # Writes an edge list of users to link_id in a separate text file

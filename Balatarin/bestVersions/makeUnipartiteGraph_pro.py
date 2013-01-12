@@ -17,7 +17,7 @@ voteThreshold = 5
 sigDigit = 4
 sDelta = sys.argv[1]  # start date from first
 eDelta = sys.argv[2]  # in days
-dirName = sys.argv[3] # directory name in unipartite and in bipartite
+#dirName = sys.argv[3] # directory name in unipartite and in bipartite
 first = datetime.date(2006,8,14)
 startDate = first + datetime.timedelta(days=int(sDelta))
 endDate = startDate + datetime.timedelta(days=int(eDelta))
@@ -25,10 +25,13 @@ sDate = startDate.isoformat().split('T')[0].split('-')
 eDate = endDate.isoformat().split('T')[0].split('-')
 bgraphname = "bipartite_politics_"+sDate[1]+sDate[2]+sDate[0]+'-'+eDate[1]+eDate[2]+eDate[0]
 ugraphname = "U-pol_J"+str(coefficient)+"VT"+str(voteThreshold)+"_"+sDate[1]+sDate[2]+sDate[0]+'-'+eDate[1]+eDate[2]+eDate[0]
-PATH = "/media/data3/allen/"
-f = open(PATH+"bipartite/"+dirName+"/"+bgraphname+".txt","r")
-h = open(PATH+"unipartite/"+dirName+"/"+ugraphname+".txt","w")
-u = open(PATH+"unipartite/"+dirName+"/U-pol_J"+str(coefficient)+"VT"+str(voteThreshold)+"_stats.txt","a")
+PATH = "/media/data2/roja/Balatarin/CompleteRun"
+#f = open(PATH+"/bipartite/"+dirName+"/"+bgraphname+".txt","r")
+#h = open(PATH+"/unipartite/"+dirName+"/"+ugraphname+".txt","w")
+#u = open(PATH+"/unipartite/"+dirName+"/U-pol_J"+str(coefficient)+"VT"+str(voteThreshold)+"_stats.txt","a")
+f = open(PATH+"/bipartite/"+bgraphname+".txt","r")
+h = open(PATH+"/unipartite/"+ugraphname+".txt","w")
+u = open(PATH+"/unipartite/"+"/U-pol_J"+str(coefficient)+"VT"+str(voteThreshold)+"_stats.txt","a")
 seen_users = set()
 user_links = {}     # Dictionary of user ids as keys
 for line in f:

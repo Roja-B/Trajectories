@@ -1,17 +1,17 @@
 #!/bin/bash
-bfilenames=$(ls /media/data3/roja/Balatarin/CompleteRun/bipartite/)
-ufilenames=$(ls /media/data3/roja/Balatarin/CompleteRun/unipartite/)
+bfilenames=$(ls /media/data2/roja/Balatarin/CompleteRun/bipartite/)
+ufilenames=$(ls /media/data2/roja/Balatarin/CompleteRun/unipartite/)
 for filename in $ufilenames; do
         dirname=$(echo $filename | tr -dc "[:digit:]")
         mkdir ./Results/$dirname
-        cp /media/data3/roja/Balatarin/CompleteRun/unipartite/$filename ./Results/$dirname/unipartite.txt
+        cp /media/data2/roja/Balatarin/CompleteRun/unipartite/$filename ./Results/$dirname/unipartite.txt
 done
 for filename in $bfilenames; do
         dirname=1005$(echo $filename | tr -dc "[:digit:]")  
         echo $dirname
-        cp /media/data3/roja/Balatarin/CompleteRun/bipartite/$filename ./Results/$dirname/bipartite.txt
+        cp /media/data2/roja/Balatarin/CompleteRun/bipartite/$filename ./Results/$dirname/bipartite.txt
 done
-dnames=$(ls /media/data3/roja/Balatarin/CompleteRun/Results/)
+dnames=$(ls /media/data2/roja/Balatarin/CompleteRun/Results/)
 for dname in $dnames; do
 	echo $dname
 	cp *.R ./Results/$dname/
@@ -19,4 +19,4 @@ for dname in $dnames; do
 	R --save < main_balatarin.R
 	cd ../..
 done
-mv Results/NumComsAndModularitie Work
+mv Results/NumComsAndModularities Work

@@ -12,7 +12,7 @@ def union(a,b):
 #M1 = int(raw_input('Enter the number of communities in cluster 1: '))
 #M2 = int(raw_input('Enter the number of communities in cluster 2: '))
 PATH = "./Results"
-prefix = "100"
+prefix = "1005"
 def contingency(dirname1,dirname2,numComs1,numComs2):
 	PATH1 = PATH + '/' + dirname1
 	PATH2 = PATH + '/' + dirname2

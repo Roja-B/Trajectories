@@ -1,6 +1,6 @@
 # Important Note: Arrays in R are labeled from 1 to n, but vertices in igraph are labled from 0 to n-1. This means V(G)[0]$name = V(G)$name[1]
 
-PATH = "/media/data3/roja/Balatarin/CompleteRun/Results/"
+PATH = "/media/data2/roja/Balatarin/CompleteRun/Results/"
 library(igraph)
 # read graph from file
 G<-read.graph("unipartite.txt", format="ncol")
