@@ -140,7 +140,7 @@ def transitionProb(date,contingencyfilename):
         t.close()
 #----------- main() ---------------
 graphDates = []
-f = open("Work/U-pol_J100VT_stats.txt","r")
+f = open("Work/U-pol_J100VT5_stats.txt","r")
 #f = open("Work/U-pol_L-VT5_stats.txt","r")
 for line in f:
         graphDate = line.split(" ")[0]
