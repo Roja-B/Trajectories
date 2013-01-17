@@ -1,4 +1,6 @@
 
+./script_both1.sh 
+
 after saving bipartite and unitpartite graphs:
 
 00) move U-pol_J100VT5_stats.txt to /Work directory

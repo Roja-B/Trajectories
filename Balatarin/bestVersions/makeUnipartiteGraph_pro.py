@@ -70,7 +70,7 @@ for i in range(numUsers):
 		edges = edges+1
 combinations = nCr(numUsers,2)
 eDensity = round(edges/combinations,sigDigit)
-#print "There were "+str(len(eliminations)) +" eliminations with a minimum threshold of "+str(voteThreshold)+" votes."
+print "There were "+str(len(eliminations)) +" eliminations with a minimum threshold of "+str(voteThreshold)+" votes."
 #print "Coefficient multiplier for Jaccard Index: "+str(coefficient)
 #print "There are "+str(numUsers)+" valid voters."		
 #print "Total possible combinations between each user pair: "+str(combinations)

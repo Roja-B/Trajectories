@@ -1,6 +1,6 @@
-#!/bin/bash 
+#!/bin/bash -e
 python prepare4R_NumComsAndModularities.py
-rm Work/RandIndecesOverTime_withUnsharedNodes.txt
+#rm Work/RandIndecesOverTime_withUnsharedNodes.txt
 python com_contingencytable_Rand.py
 mkdir Results/ComContingencyTable1005
 mkdir Results/TransitionProbs
@@ -14,7 +14,7 @@ mv Results/TrProbs* Results/TransitionProbs/
 # This is for creating the paths
 python communityEvolution.py
 i=1
-Num=10
+Num=40
 while [ $i -lt $Num ]; do
         python communityEvolutionPaths.py $i
 #       python CommunityTopicBalatarin.py $i 

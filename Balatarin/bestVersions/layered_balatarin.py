@@ -25,10 +25,10 @@ for line in f1:
 #	print node1
 	if node1 not in nodesizes.keys(): nodesizes[node1] = 3
         if node2 not in nodesizes.keys(): nodesizes[node2] = 3
-	size1= int(nodesizes[node1])
-	size2= int(nodesizes[node2])
-	#size1= int(math.sqrt(nodesizes[node1]))
-	#size2= int(math.sqrt(nodesizes[node2]))
+	#size1= int(nodesizes[node1])
+	#size2= int(nodesizes[node2])
+	size1= int(math.sqrt(nodesizes[node1]))
+	size2= int(math.sqrt(nodesizes[node2]))
 #	size1 = 5
 #	size2 = 5
 #	G.add_node(node1,group=node1.split("_")[0]) #size=nodesizes[node1])
