@@ -1,10 +1,12 @@
 #!/bin/bash
 
-dirnames=$(ls)
+dirnames=$(ls /media/E/E/../../..)
+
 for dirname in $dirnames; do
-        filenames=$(ls $dirname)
-	for filename in $filenames; do
-		grep -l abc $dirname/$filename
-	done
+	grep -l noPunct /media/E/E/$dirname/*
+#        filenames=$(ls $dirname)
+#	for filename in $filenames; do
+#		grep -l noPunct $dirname/$filename
+#	done
 done
 
